@@ -14,7 +14,7 @@ bot_configs = {
         },
         "lumberjack":{
             "img_name": "lumberjack_area.png",
-            "confidence": 0.955
+            "confidence": 0.97
         }
     }
 }
