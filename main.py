@@ -49,10 +49,11 @@ def doCraftProcess(element_data,extra_x=0,extra_y=0):
 
 
 def startCollecting(collector_name):
-    total_element_count , element = getCollectorAreaData(collector_name)
+    total_element_count , elements = getCollectorAreaData(collector_name)
     print(f'[DEBUG]: Total {collector_name} == {total_element_count}')
     if(total_element_count):
-       doCraftProcess(element[0])
+        for element in elements:
+            doCraftProcess(element)
 
 def startCraftingProcessInSequence():
     startCollecting('lumberjack')
