@@ -53,8 +53,14 @@ def startCollecting(collector_name):
     print(f'[DEBUG]: Total {collector_name} == {total_element_count}')
     if(total_element_count):
         if 'chained' not in bot_configs["collecting_data"][collector_name]:
+            #additional attract
+            additional_x = 0;additional_y = 0
+            if 'additional' in bot_configs["collecting_data"][collector_name]:
+                additional_x = bot_configs["collecting_data"][collector_name]["additional"]["x"]
+                additional_y = bot_configs["collecting_data"][collector_name]["additional"]["y"]
+            #------------------
             for element in elements:
-                doCraftProcess(element)
+                doCraftProcess(element,additional_x,additional_y)
         else:
             print(f'[DEBUG]: Collecting {collector_name} -> with single click [chained-case]')
             pyautogui.moveTo(elements[0].left,elements[0].top)
@@ -66,6 +72,7 @@ def startCraftingProcessInSequence():
     startCollecting('sugar')
     startCollecting('jelly')
     startCollecting('jammery')
+    startCollecting('carpentry')
     startCollecting('jellystar')
     threading.Timer(5,startCraftingProcessInSequence).start() # threading start after all operation above is done
 

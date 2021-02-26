@@ -24,6 +24,14 @@ bot_configs = {
             "img_name": "jellystart_area.png",
             "confidence": 0.84,
             "chained": True # if chained -> no need to iterate other element
+        },
+        "carpentry":{
+            "img_name": "carpentry_area.png",
+            "confidence": 0.97,
+            "additional": {
+                "x": 100,
+                "y": 0
+            }
         }
     }
 }
