@@ -15,6 +15,15 @@ bot_configs = {
         "lumberjack":{
             "img_name": "lumberjack_area.png",
             "confidence": 0.97
+        },
+        "jammery":{
+            "img_name": "jammery_area.png",
+            "confidence": 0.97
+        },
+        "jellystar":{
+            "img_name": "jellystart_area.png",
+            "confidence": 0.84,
+            "chained": True # if chained -> no need to iterate other element
         }
     }
 }
