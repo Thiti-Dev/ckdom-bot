@@ -32,6 +32,7 @@ def doCraftProcess(element_data,extra_x=0,extra_y=0):
                 pyautogui.click()
                 time.sleep(0.7)
     else:
+        print('Recently just collected')
         pyautogui.click()
         time.sleep(1.5)
         if isCraftBarAreaExist():
@@ -51,6 +52,7 @@ def doCraftProcess(element_data,extra_x=0,extra_y=0):
 def startCollecting(collector_name):
     total_element_count , elements = getCollectorAreaData(collector_name)
     print(f'[DEBUG]: Total {collector_name} == {total_element_count}')
+    print(elements)
     if(total_element_count):
         if 'chained' not in bot_configs["collecting_data"][collector_name]:
             #additional attract

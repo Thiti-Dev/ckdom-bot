@@ -2,7 +2,11 @@ bot_configs = {
     "collecting_data": {
         "sugar":{
             "img_name": "sugar_area.png",
-            "confidence": 0.975
+            "confidence": 0.98,
+            "additional": {
+                "x": -20,
+                "y": 50
+            }
         },
         "jelly":{
             "img_name": "jelly_area.png",
@@ -10,15 +14,19 @@ bot_configs = {
         },
         "smith":{
             "img_name": "smith_area.png",
-            "confidence": 0.96            
+            "confidence": 0.98         
         },
         "lumberjack":{
             "img_name": "lumberjack_area.png",
-            "confidence": 0.97
+            "confidence": 0.98,
+            "additional": {
+                "x": 50,
+                "y": 0
+            }
         },
         "jammery":{
             "img_name": "jammery_area.png",
-            "confidence": 0.97
+            "confidence": 0.955
         },
         "jellystar":{
             "img_name": "jellystart_area.png",
@@ -27,7 +35,7 @@ bot_configs = {
         },
         "carpentry":{
             "img_name": "carpentry_area.png",
-            "confidence": 0.97,
+            "confidence": 0.975,
             "additional": {
                 "x": 100,
                 "y": 0
